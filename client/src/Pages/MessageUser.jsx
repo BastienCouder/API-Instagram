@@ -5,7 +5,7 @@ import CreateMessage from "../components/Messages/CreateMessage";
 import { IoMdReturnLeft } from "react-icons/io";
 import { io } from "socket.io-client";
 import { getMessages } from "../Store/actions/message.actions";
-import UidContext from "../AppContext";
+import UidContext from "../components/AppContext";
 import { apiUrl, location } from "../Utils/Utils";
 import FriendsHint from "../components/profil/FriendsHint";
 import MainLayout from "../Layouts";
