@@ -8,8 +8,12 @@ const http = require("http");
 const helmet = require("helmet");
 const passport = require("passport");
 const passportStrategy = require("./config/passport");
+const crypto = require("crypto");
 
 const { checkUser, requireAuth } = require("./middlewares/auth.middleware");
+
+const secretKey = crypto.randomBytes(32).toString("hex");
+console.log("Clé secrète générée :", secretKey);
 
 // Connexion à la DB
 
@@ -19,7 +23,7 @@ const app = express();
 const server = http.createServer(app);
 
 // Middleware
-
+app.use(session({ secret: secretKey, resave: true, saveUninitialized: true })); // Configuration du middleware express-session
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(helmet()); // Activation des en-têtes de sécurité
