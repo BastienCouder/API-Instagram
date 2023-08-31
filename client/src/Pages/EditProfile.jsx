@@ -8,7 +8,7 @@ import { updateBio } from "../Store/actions/user.actions";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import { location } from "../Utils/Utils";
 import MainLayout from "../Layouts";
-import DeleteProfil from "../Components/Profil/DeleteProfil";
+import DeleteProfil from "../components/Profil/DeleteProfil";
 
 const EditProfile = () => {
   const uid = useContext(UidContext);

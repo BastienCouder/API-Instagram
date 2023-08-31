@@ -5,7 +5,7 @@ import FollowHandler from "../components/profil/FollowHandler";
 import { BsFillSendFill } from "react-icons/bs";
 import UidContext from "../components/AppContext";
 import FriendsHint from "../components/profil/FriendsHint";
-import ProfileContent from "../Components/Profil/ProfileContent";
+import ProfileContent from "../components/Profil/ProfileContent";
 import MainLayout from "../Layouts";
 
 const ProfilePage = () => {
