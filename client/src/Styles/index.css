@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  color: #e5e5e5;
+}
+
+::selection {
+  background-color: #171717;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Style pour les inputs désactivés */
+input:disabled {
+  background-color: #171717;
+  color: #474747;
+  cursor: not-allowed;
+  border-color: #474747;
+}
