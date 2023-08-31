@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import FollowHandler from "../component/profil/FollowHandler";
+import FollowHandler from "../component/Profil/FollowHandler";
 import { BsFillSendFill } from "react-icons/bs";
 import UidContext from "../Services/AppContext";
 import FriendsHint from "../component/Profil/FriendsHint";
