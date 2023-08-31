@@ -33,11 +33,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Cors
 const corsOptions = {
-  origin: [
-    process.env.CLIENT_URL,
-    process.env.GOOGLE_URL,
-    "https://social-media-bastiencouder.vercel.app",
-  ],
+  origin: [process.env.CLIENT_URL, process.env.GOOGLE_URL],
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
