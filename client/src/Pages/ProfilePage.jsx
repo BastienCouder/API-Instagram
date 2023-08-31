@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import FollowHandler from "../component/profil/FollowHandler";
 import { BsFillSendFill } from "react-icons/bs";
 import UidContext from "../Services/AppContext";
-import FriendsHint from "../component/profil/FriendsHint";
+import FriendsHint from "../component/Profil/FriendsHint";
 import ProfileContent from "../component/Profil/ProfileContent";
 import MainLayout from "../Layouts";
 

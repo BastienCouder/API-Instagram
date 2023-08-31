@@ -7,7 +7,7 @@ import { io } from "socket.io-client";
 import { getMessages } from "../Store/actions/message.actions";
 import UidContext from "../Services/AppContext";
 import { apiUrl, location } from "../Utils/Utils";
-import FriendsHint from "../component/profil/FriendsHint";
+import FriendsHint from "../component/Profil/FriendsHint";
 import MainLayout from "../Layouts";
 import SettingsMessage from "../component/Messages/SettingsMessage";
 

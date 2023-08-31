@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Thread from "../component/Thread";
 import UidContext from "../Services/AppContext";
 import { Link } from "react-router-dom";
-import FriendsHint from "../component/profil/FriendsHint";
+import FriendsHint from "../component/Profil/FriendsHint";
 import MainLayout from "../Layouts";
 
 const Home = () => {
