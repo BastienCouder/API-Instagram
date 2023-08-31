@@ -35,6 +35,9 @@ module.exports.signIn = async (req, res) => {
       sameSite: "strict",
     });
     res.status(200).json({ message: "Connexion réussie" });
+    console.log(token);
+    console.log(user);
+    console.log("reussie");
   } catch (error) {
     const errors = signInErrors(error);
     res.status(201).json({ errors });
