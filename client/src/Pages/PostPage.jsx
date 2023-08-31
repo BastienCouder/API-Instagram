@@ -4,9 +4,9 @@ import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { dateParser } from "../Utils/Utils";
 import { BiCommentDetail } from "react-icons/bi";
-import Delete from "../components/Post/Delete";
-import PostCommentReply from "../components/Post/PostCommentReply";
-import LikeButton from "../components/Post/LikeButton";
+import Delete from "../component/Post/Delete";
+import PostCommentReply from "../component/Post/PostCommentReply";
+import LikeButton from "../component/Post/LikeButton";
 import MainLayout from "../Layouts";
 
 const PostPage = () => {

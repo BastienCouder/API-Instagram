@@ -1,11 +1,11 @@
 import { useContext, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import FollowHandler from "../components/profil/FollowHandler";
+import FollowHandler from "../component/profil/FollowHandler";
 import { BsFillSendFill } from "react-icons/bs";
 import UidContext from "../Services/AppContext";
-import FriendsHint from "../components/profil/FriendsHint";
-import ProfileContent from "../components/Profil/ProfileContent";
+import FriendsHint from "../component/profil/FriendsHint";
+import ProfileContent from "../component/Profil/ProfileContent";
 import MainLayout from "../Layouts";
 
 const ProfilePage = () => {
