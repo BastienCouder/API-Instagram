@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { UidContext } from "../AppContext";
+import { UidContext } from "../../Services/AppContext";
 import { useDispatch } from "react-redux";
 import { likePost, unlikePost } from "../../Store/actions/post.actions"; // Assurez-vous d'importer les bonnes actions
 import { useNavigate } from "react-router-dom";

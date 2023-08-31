@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useSelector } from "react-redux";
 import Thread from "../components/Thread";
-import UidContext from "../components/AppContext";
+import UidContext from "../Services/AppContext";
 import { Link } from "react-router-dom";
 import FriendsHint from "../components/profil/FriendsHint";
 import MainLayout from "../Layouts";

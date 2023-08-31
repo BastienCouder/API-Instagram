@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { IoMdReturnLeft } from "react-icons/io";
 import { Link } from "react-router-dom";
-import UidContext from "../components/AppContext";
+import UidContext from "../Services/AppContext";
 import { useDispatch, useSelector } from "react-redux";
 import { updatePseudo, uploadPicture } from "../Store/actions/user.actions";
 import { updateBio } from "../Store/actions/user.actions";

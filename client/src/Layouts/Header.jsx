@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { AiFillHome, AiOutlineAppstoreAdd } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
-import { UidContext } from "../components/AppContext";
+import { UidContext } from "../Services/AppContext";
 import Logout from "../components/Log/Logout";
 import { BiSearch } from "react-icons/bi";
 

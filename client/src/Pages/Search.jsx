@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AiOutlineSearch } from "react-icons/ai";
 import FollowHandler from "../components/profil/FollowHandler";
-import UidContext from "../components/AppContext";
+import UidContext from "../Services/AppContext";
 import MainLayout from "../Layouts";
 
 const Search = () => {

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addReply, getPosts } from "../../Store/actions/post.actions";
 import { BsFillSendFill } from "react-icons/bs";
 import PostReply from "./PostReply";
-import UidContext from "../AppContext";
+import UidContext from "../../Services/AppContext";
 import PropTypes from "prop-types";
 
 const CardComments = ({ post, type }) => {

@@ -4,7 +4,7 @@ import { addComment, getPosts } from "../../Store/actions/post.actions";
 import { useDispatch, useSelector } from "react-redux";
 import PostComment from "./PostComment";
 import PropTypes from "prop-types";
-import UidContext from "../AppContext";
+import UidContext from "../../Services/AppContext";
 
 const PostCommentsReply = ({ post, type }) => {
   const uid = useContext(UidContext);

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import UidContext from "../../components/AppContext";
+import UidContext from "../../Services/AppContext";
 
 const UsersInfosPFF = ({ userData, userPosts }) => {
   const uid = useContext(UidContext);

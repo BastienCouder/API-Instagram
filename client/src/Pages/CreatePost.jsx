@@ -6,7 +6,7 @@ import {
 } from "../Utils/Utils";
 import { useDispatch, useSelector } from "react-redux";
 import { createPost, getPosts } from "../Store/actions/post.actions";
-import UidContext from "../components/AppContext";
+import UidContext from "../Services/AppContext";
 import MainLayout from "../Layouts";
 
 const CreatePost = () => {
