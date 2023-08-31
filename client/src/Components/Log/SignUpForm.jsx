@@ -71,8 +71,10 @@ const SignUpForm = () => {
           setPseudoError(pseudo);
           setEmailError(email);
           setPasswordError(password);
+          console.log(response);
         } else {
           setFormSubmit(true);
+          console.log(response);
         }
       } catch (error) {
         console.log(error);
