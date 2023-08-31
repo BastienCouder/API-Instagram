@@ -1,4 +1,5 @@
 import "./Styles/index.css";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import "./Styles/tailwind.css";
 import App from "./App";
@@ -20,14 +21,11 @@ const store = createStore(
 store.dispatch(getUsers());
 store.dispatch(getPosts());
 
-const root = document.getElementById("root");
-const rootComponent = (
-  <Provider store={store}>
-    <App />
-  </Provider>
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
 );
-
-// Utilisez createRoot au lieu de ReactDOM.render
-const rootElement = ReactDOM.createRoot(root);
-rootElement.render(rootComponent);
-
