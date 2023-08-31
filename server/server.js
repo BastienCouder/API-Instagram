@@ -20,7 +20,7 @@ console.log("Clé secrète générée :", secretKey);
 connectDB();
 
 const app = express();
-const server = https.createServer(app);
+const server = http.createServer(app);
 
 // Middleware
 app.use(
