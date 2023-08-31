@@ -23,14 +23,7 @@ const app = express();
 const server = http.createServer(app);
 
 // Middleware
-app.use(
-  session({
-    secret: secretKey,
-    resave: true,
-    saveUninitialized: true,
-    cookie: { secure: true },
-  })
-); // Configuration du middleware express-session
+app.use(session({ secret: secretKey, resave: true, saveUninitialized: true })); // Configuration du middleware express-session
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(helmet()); // Activation des en-têtes de sécurité
