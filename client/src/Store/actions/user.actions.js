@@ -16,7 +16,7 @@ export const GET_UPLOAD_ERRORS = "GET_ULPOAD_ERRORS";
 export const getUser = (uid) => {
   return (dispatch) => {
     return axios
-      .get(`${apiUrl}user/${uid}`)
+      .get(`${apiUrl}/user/${uid}`)
       .then((res) => {
         dispatch({ type: GET_USER, payload: res.data });
       })
@@ -27,7 +27,7 @@ export const getUser = (uid) => {
 export const uploadPicture = (data, id) => {
   return (dispatch) => {
     axios
-      .post(`${apiUrl}user/profil`, data)
+      .post(`${apiUrl}/user/profil`, data)
       .then((res) => {
         if (res.data.error) {
           dispatch({ type: GET_UPLOAD_ERRORS, payload: res.data.error });
@@ -42,14 +42,14 @@ export const uploadPicture = (data, id) => {
           error
         );
       });
-    axios.get(`${apiUrl}user/${id}`);
+    axios.get(`${apiUrl}/user/${id}`);
   };
 };
 
 export const updateBio = (userId, bio) => {
   return (dispatch) => {
     return axios
-      .put(`${apiUrl}user/${userId}`, { bio })
+      .put(`${apiUrl}/user/${userId}`, { bio })
       .then((res) => {
         dispatch({ type: UPDATE_BIO, payload: res.data.bio });
       })
@@ -60,7 +60,7 @@ export const updateBio = (userId, bio) => {
 export const updatePseudo = (userId, pseudo) => {
   return (dispatch) => {
     return axios
-      .put(`${apiUrl}user/${userId}`, { pseudo })
+      .put(`${apiUrl}/user/${userId}`, { pseudo })
       .then((res) => {
         if (res.data.error) {
           dispatch({ type: GET_USER_ERRORS, payload: res.data.error });
@@ -76,7 +76,7 @@ export const updatePseudo = (userId, pseudo) => {
 export const followUser = (followerId, idToFollow) => {
   return (dispatch) => {
     return axios
-      .patch(`${apiUrl}user/follow/${followerId}`, {
+      .patch(`${apiUrl}/user/follow/${followerId}`, {
         idToFollow,
       })
       .then(() => {
@@ -89,7 +89,7 @@ export const followUser = (followerId, idToFollow) => {
 export const UnFollowUser = (followerId, idToUnFollow) => {
   return (dispatch) => {
     return axios
-      .patch(`${apiUrl}user/unfollow/${followerId}`, {
+      .patch(`${apiUrl}/user/unfollow/${followerId}`, {
         idToUnFollow,
       })
       .then(() => {
@@ -102,7 +102,7 @@ export const UnFollowUser = (followerId, idToUnFollow) => {
 export const deleteUser = (userId) => {
   return (dispatch) => {
     return axios
-      .delete(`${apiUrl}user/${userId}`)
+      .delete(`${apiUrl}/user/${userId}`)
       .then(() => {
         dispatch({ type: DELETE_USER, payload: { userId } });
       })

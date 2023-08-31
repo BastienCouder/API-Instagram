@@ -20,7 +20,7 @@ const LogIndex = (props) => {
   };
 
   const googleAuth = () => {
-    window.open(`${apiUrl}auth/google/callback`, "_self");
+    window.open(`${apiUrl}/auth/google/callback`, "_self");
   };
 
   return (

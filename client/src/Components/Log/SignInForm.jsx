@@ -31,7 +31,7 @@ const SignInForm = () => {
     if (email !== "" && password !== "") {
       try {
         const response = await axios.post(
-          `${apiUrl}auth/login`,
+          `${apiUrl}/auth/login`,
           {
             email,
             password,

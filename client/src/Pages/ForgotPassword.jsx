@@ -20,7 +20,7 @@ const ForgotPassword = () => {
       if (!email) {
         setEmailError("L'email est requis");
       } else {
-        const response = await axios.post(`${apiUrl}user/forgot-password`, {
+        const response = await axios.post(`${apiUrl}/user/forgot-password`, {
           email,
         });
 

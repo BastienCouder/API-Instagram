@@ -9,7 +9,7 @@ export const DELETE_MESSAGE = "DELETE_MESSAGE";
 export const getMessages = () => {
   return (dispatch) => {
     return axios
-      .get(`${apiUrl}message`)
+      .get(`${apiUrl}/message`)
       .then((res) => {
         dispatch({ type: GET_MESSAGES, payload: res.data });
       })
@@ -19,14 +19,14 @@ export const getMessages = () => {
 
 export const createMessage = (data) => {
   return () => {
-    return axios.post(`${apiUrl}message`, data);
+    return axios.post(`${apiUrl}/message`, data);
   };
 };
 
 export const editMessage = (messageId, updatedData) => {
   return (dispatch) => {
     return axios
-      .put(`${apiUrl}message/${messageId}`, updatedData)
+      .put(`${apiUrl}/message/${messageId}`, updatedData)
       .then((res) => {
         dispatch({ type: EDIT_MESSAGE, payload: res.data });
       })
@@ -37,7 +37,7 @@ export const editMessage = (messageId, updatedData) => {
 export const deleteMessage = (messageId) => {
   return (dispatch) => {
     return axios
-      .delete(`${apiUrl}message/${messageId}`)
+      .delete(`${apiUrl}/message/${messageId}`)
       .then(() => {
         dispatch({ type: DELETE_MESSAGE, payload: { messageId } });
       })

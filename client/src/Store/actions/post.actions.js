@@ -22,7 +22,7 @@ export const GET_POST_ERRORS = "GET_POST_ERRORS";
 export const getPosts = () => {
   return (dispatch) => {
     return axios
-      .get(`${apiUrl}post`)
+      .get(`${apiUrl}/post`)
       .then((res) => {
         dispatch({ type: GET_POSTS, payload: res.data });
       })
@@ -32,7 +32,7 @@ export const getPosts = () => {
 
 export const createPost = (data) => {
   return (dispatch) => {
-    return axios.post(`${apiUrl}post`, data).then((res) => {
+    return axios.post(`${apiUrl}/post`, data).then((res) => {
       if (res.data.error) {
         dispatch({ type: GET_POST_ERRORS, payload: res.data.error });
       } else {
@@ -45,7 +45,7 @@ export const createPost = (data) => {
 export const likePost = (postId, userId) => {
   return (dispatch) => {
     return axios
-      .patch(`${apiUrl}post/like-post/${postId}`, {
+      .patch(`${apiUrl}/post/like-post/${postId}`, {
         userId,
       })
       .then(() => {
@@ -58,7 +58,7 @@ export const likePost = (postId, userId) => {
 export const unlikePost = (postId, userId) => {
   return (dispatch) => {
     return axios
-      .patch(`${apiUrl}post/dislike-post/${postId}`, {
+      .patch(`${apiUrl}/post/dislike-post/${postId}`, {
         userId,
       })
       .then(() => {
@@ -71,7 +71,7 @@ export const unlikePost = (postId, userId) => {
 export const deletePost = (postId) => {
   return (dispatch) => {
     return axios
-      .delete(`${apiUrl}post/${postId}`)
+      .delete(`${apiUrl}/post/${postId}`)
       .then(() => {
         dispatch({ type: DELETE_POST, payload: { postId } });
       })
@@ -83,7 +83,7 @@ export const addComment = (postId, commenterId, text, commenterPseudo) => {
   return (dispatch) => {
     return axios({
       method: "patch",
-      url: `${apiUrl}post/comment-post/${postId}`,
+      url: `${apiUrl}/post/comment-post/${postId}`,
       data: { commenterId, text, commenterPseudo },
     })
       .then(() => {
@@ -97,7 +97,7 @@ export const deleteComment = (postId, commentId) => {
   return (dispatch) => {
     return axios({
       method: "patch",
-      url: `${apiUrl}post/delete-comment-post/${postId}`,
+      url: `${apiUrl}/post/delete-comment-post/${postId}`,
       data: { commentId },
     })
       .then(() => {
@@ -110,7 +110,7 @@ export const deleteComment = (postId, commentId) => {
 // export const likeComment = (commentId, userId) => {
 //   return (dispatch) => {
 //     return axios
-//       .patch(`${apiUrl}post/like-comment/${commentId}`, {
+//       .patch(`${apiUrl}/post/like-comment/${commentId}`, {
 //         userId,
 //       })
 //       .then((res) => {
@@ -124,7 +124,7 @@ export const deleteComment = (postId, commentId) => {
 //   return (dispatch) => {
 //     return axios
 //       .patch(
-//         `${apiUrl}post/dislike-comment/${commentId}`,
+//         `${apiUrl}/post/dislike-comment/${commentId}`,
 //         {
 //           userId,
 //         }
@@ -141,7 +141,7 @@ export const deleteComment = (postId, commentId) => {
 export const addReply = (commentId, replierId, text, replierPseudo) => {
   return (dispatch) => {
     return axios
-      .patch(`${apiUrl}post/${commentId}/reply`, {
+      .patch(`${apiUrl}/post/${commentId}/reply`, {
         replierId,
         text,
         replierPseudo,
@@ -162,7 +162,7 @@ export const addReply = (commentId, replierId, text, replierPseudo) => {
 export const deleteReply = (commentId, replierId) => {
   return (dispatch) => {
     return axios
-      .patch(`${apiUrl}post/${commentId}/reply-delete`, {
+      .patch(`${apiUrl}/post/${commentId}/reply-delete`, {
         replierId,
       })
       .then(() => {
