@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Log from "../component/Log/LogIndex";
+import Log from "../Components/Log/LogIndex";
 import { UidContext } from "../Services/AppContext";
 import ProfilePage from "./ProfilePage";
 import MainLayout from "../Layouts";

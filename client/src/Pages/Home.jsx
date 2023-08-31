@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { useSelector } from "react-redux";
-import Thread from "../component/Thread";
+import Thread from "../Components/Thread";
 import UidContext from "../Services/AppContext";
 import { Link } from "react-router-dom";
-import FriendsHint from "../component/Profil/FriendsHint";
+import FriendsHint from "../Components/Profil/FriendsHint";
 import MainLayout from "../Layouts";
 
 const Home = () => {

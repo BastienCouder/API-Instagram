@@ -1,15 +1,15 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import CreateMessage from "../component/Messages/CreateMessage";
+import CreateMessage from "../Components/Messages/CreateMessage";
 import { IoMdReturnLeft } from "react-icons/io";
 import { io } from "socket.io-client";
 import { getMessages } from "../Store/actions/message.actions";
 import UidContext from "../Services/AppContext";
 import { apiUrl, location } from "../Utils/Utils";
-import FriendsHint from "../component/Profil/FriendsHint";
+import FriendsHint from "../Components/Profil/FriendsHint";
 import MainLayout from "../Layouts";
-import SettingsMessage from "../component/Messages/SettingsMessage";
+import SettingsMessage from "../Components/Messages/SettingsMessage";
 
 const MessageUser = () => {
   const uid = useContext(UidContext);

@@ -3,7 +3,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { AiFillHome, AiOutlineAppstoreAdd } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { UidContext } from "../Services/AppContext";
-import Logout from "../component/Log/Logout";
+import Logout from "../Components/Log/Logout";
 import { BiSearch } from "react-icons/bi";
 
 const Navigation = () => {

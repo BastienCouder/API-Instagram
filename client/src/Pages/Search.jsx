@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AiOutlineSearch } from "react-icons/ai";
-import FollowHandler from "../component/Profil/FollowHandler";
+import FollowHandler from "../Components/Profil/FollowHandler";
 import UidContext from "../Services/AppContext";
 import MainLayout from "../Layouts";
 

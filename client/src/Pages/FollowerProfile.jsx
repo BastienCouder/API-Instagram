@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { IoMdReturnLeft } from "react-icons/io";
 import { AiOutlineSearch } from "react-icons/ai";
-import FollowHandler from "../component/Profil/FollowHandler";
+import FollowHandler from "../Components/Profil/FollowHandler";
 import MainLayout from "../Layouts";
 
 const FollowingProfile = () => {
