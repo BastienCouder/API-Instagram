@@ -9,8 +9,8 @@ import CreatePost from "../Pages/CreatePost";
 import MessageUser from "../Pages/MessageUser";
 import ProfilePage from "../Pages/ProfilePage";
 import PostPage from "../Pages/PostPage";
-import ForgotPassword from "../components/Log/ForgotPassword";
-import ResetPassword from "../Components/Log/ResetPassword";
+import ForgotPassword from "../Pages/ForgotPassword";
+import ResetPassword from "../Pages/ResetPassword";
 
 const RouteIndex = () => {
   return (

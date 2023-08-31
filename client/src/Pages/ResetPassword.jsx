@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import axios from "axios";
-import { apiUrl } from "../../Utils/Utils";
+import { apiUrl } from "../Utils/Utils";
 import { IoMdReturnLeft } from "react-icons/io";
 import { MdPassword } from "react-icons/md";
 
