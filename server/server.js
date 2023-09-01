@@ -22,22 +22,33 @@ connectDB();
 const app = express();
 const server = http.createServer(app);
 
+let store = new MongoDBStore({
+  uri: process.env.MONGODB_URI,
+  collection: "sessions",
+});
+
 // Middleware
 app.use(
   session({
     secret: secretKey,
+    cookie: {
+      maxAge: 1000 * 60 * 60 * 24 * 7,
+      domain: process.env.CLIENT_URL,
+      secure: true,
+    },
     resave: true,
     saveUninitialized: true,
-    store: new MongoDBStore({
-      uri: process.env.MONGODB_URI,
-      collection: "sessions",
-    }),
-    cookie: {
-      domain: process.env.CLIENT_URL,
-      secure: true, // Essayez de régler secure à true pour Vercel (environnement HTTPS)
-    },
+    store: store,
   })
 );
+
+store.on("error", function (error) {
+  console.log(error);
+});
+
+app.get("/", function (req, res) {
+  res.send("Hello " + JSON.stringify(req.session));
+});
 
 app.use(passport.initialize());
 app.use(passport.session());
