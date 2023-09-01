@@ -28,17 +28,13 @@ router.get(
         const token = createToken(existingUser._id);
 
         res.cookie("jwt", token, {
-          httpOnly: true,
+          httpOnly: false,
           maxAge,
           secure: true,
           sameSite: "strict",
         });
 
-        if (!existingUser.pseudo) {
-          res.redirect(`${process.env.CLIENT_URL}/create-pseudo`);
-        } else {
-          res.redirect(`${process.env.CLIENT_URL}`);
-        }
+        res.redirect(`${process.env.CLIENT_URL}`);
       } else {
         res.redirect(`${process.env.CLIENT_URL}/register`);
       }

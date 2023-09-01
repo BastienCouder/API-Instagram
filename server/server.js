@@ -35,6 +35,7 @@ app.use(
       maxAge: 1000 * 60 * 60 * 24 * 7,
       domain: process.env.COOKIE_CLIENT_URL,
       secure: true,
+      httpOnly: false,
     },
     resave: true,
     saveUninitialized: true,
