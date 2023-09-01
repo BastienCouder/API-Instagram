@@ -9,6 +9,7 @@ const helmet = require("helmet");
 const passport = require("passport");
 const passportStrategy = require("./config/passport");
 const crypto = require("crypto");
+const MongoDBStore = require("connect-mongodb-session")(session);
 
 const { checkUser, requireAuth } = require("./middlewares/auth.middleware");
 
@@ -16,20 +17,31 @@ const secretKey = crypto.randomBytes(32).toString("hex");
 console.log("Clé secrète générée :", secretKey);
 
 // Connexion à la DB
-
 connectDB();
 
 const app = express();
 const server = http.createServer(app);
 
 // Middleware
-app.use(session({ secret: secretKey, resave: true, saveUninitialized: true })); // Configuration du middleware express-session
+app.use(
+  session({
+    secret: secretKey,
+    resave: false,
+    saveUninitialized: false,
+    store: new MongoDBStore({
+      uri: process.env.MONGODB_URI,
+      collection: "sessions",
+    }),
+  })
+);
+
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(helmet()); // Activation des en-têtes de sécurité
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.set("trust proxy", 1);
 
 // Cors
 const corsOptions = {
