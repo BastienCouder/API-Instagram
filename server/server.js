@@ -33,6 +33,7 @@ app.use(
       collection: "sessions",
     }),
     cookie: {
+      domain: process.env.CLIENT_URL,
       secure: true, // Essayez de régler secure à true pour Vercel (environnement HTTPS)
     },
   })
