@@ -29,7 +29,7 @@ module.exports.signIn = async (req, res) => {
 
     // Stockez le token dans un cookie sécurisé.
     res.cookie("jwt", token, {
-      httpOnly: true,
+      httpOnly: false,
       maxAge,
       secure: true,
       sameSite: "strict",
@@ -45,7 +45,7 @@ module.exports.logout = async (req, res) => {
   try {
     // Effacez le cookie sécurisé.
     res.clearCookie("jwt", {
-      httpOnly: true,
+      httpOnly: false,
       secure: true,
       sameSite: "strict",
     });
