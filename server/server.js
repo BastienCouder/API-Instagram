@@ -36,6 +36,7 @@ app.use(
       domain: process.env.COOKIE_CLIENT_URL,
       secure: true,
       httpOnly: false,
+      path: "/(.*)",
     },
     resave: true,
     saveUninitialized: true,
