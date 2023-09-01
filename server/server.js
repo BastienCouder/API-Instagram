@@ -32,6 +32,9 @@ app.use(
       uri: process.env.MONGODB_URI,
       collection: "sessions",
     }),
+    cookie: {
+      secure: true, // Essayez de régler secure à true pour Vercel (environnement HTTPS)
+    },
   })
 );
 
