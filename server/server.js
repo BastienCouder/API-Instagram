@@ -39,7 +39,7 @@ app.use(
     saveUninitialized: true,
     cookie: {
       maxAge: 1000 * 60 * 60 * 24 * 7,
-      domain: process.env.COOKIE_CLIENT_URL,
+      domain: process.env.CLIENT_URL,
       secure: true,
       httpOnly: false,
       path: "/",
