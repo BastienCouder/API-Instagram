@@ -4,7 +4,7 @@ const connectDB = require("./config/db");
 const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
-const http = require("http");
+const https = require("https");
 const helmet = require("helmet");
 const passport = require("passport");
 const passportStrategy = require("./config/passport");
@@ -20,7 +20,7 @@ console.log("Clé secrète générée :", secretKey);
 connectDB();
 
 const app = express();
-const server = http.createServer(app);
+const server = https.createServer(app);
 
 let store = new MongoDBStore({
   uri: process.env.MONGODB_URI,
