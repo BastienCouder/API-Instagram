@@ -32,7 +32,7 @@ module.exports.signIn = async (req, res) => {
       httpOnly: false,
       maxAge,
       secure: true,
-      sameSite: "strict",
+      sameSite: "none",
     });
     res.status(200).json({ message: "Connexion réussie" });
   } catch (error) {
@@ -47,7 +47,7 @@ module.exports.logout = async (req, res) => {
     res.clearCookie("jwt", {
       httpOnly: false,
       secure: true,
-      sameSite: "strict",
+      sameSite: "none",
     });
     res.status(200).json({ message: "Déconnexion réussie" });
   } catch (err) {

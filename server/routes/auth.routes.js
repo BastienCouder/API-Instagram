@@ -31,7 +31,7 @@ router.get(
           httpOnly: false,
           maxAge,
           secure: true,
-          sameSite: "strict",
+          sameSite: "none",
         });
 
         res.redirect(`${process.env.CLIENT_URL}`);
