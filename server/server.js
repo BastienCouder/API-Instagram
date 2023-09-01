@@ -32,7 +32,7 @@ app.set("trust proxy", 1);
 
 app.use(
   session({
-    name: "MyCoolWebAppCookieName",
+    name: "MyCookie",
     secret: secretKey,
     store: store,
     resave: false,
