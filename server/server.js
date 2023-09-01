@@ -60,11 +60,7 @@ app.set("trust proxy", 1);
 
 // Cors
 const corsOptions = {
-  origin: [
-    "https://social-media-bastiencouder.vercel.app",
-    process.env.CLIENT_URL,
-    process.env.GOOGLE_URL,
-  ],
+  origin: [process.env.CLIENT_URL, process.env.GOOGLE_URL],
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
