@@ -26,8 +26,8 @@ const server = http.createServer(app);
 app.use(
   session({
     secret: secretKey,
-    resave: false,
-    saveUninitialized: false,
+    resave: true,
+    saveUninitialized: true,
     store: new MongoDBStore({
       uri: process.env.MONGODB_URI,
       collection: "sessions",
