@@ -33,7 +33,7 @@ app.use(
     secret: secretKey,
     cookie: {
       maxAge: 1000 * 60 * 60 * 24 * 7,
-      domain: process.env.CLIENT_URL,
+      domain: process.env.COOKIE_CLIENT_URL,
       secure: true,
     },
     resave: true,
