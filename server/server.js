@@ -32,18 +32,17 @@ app.set("trust proxy", 1);
 
 app.use(
   session({
+    name: "MyCoolWebAppCookieName",
     secret: secretKey,
     store: store,
     resave: false,
-    proxy: true,
     saveUninitialized: true,
-    name: "MyCoolWebAppCookieName",
     cookie: {
       maxAge: 1000 * 60 * 60 * 24 * 7,
       domain: process.env.COOKIE_CLIENT_URL,
       secure: true,
       httpOnly: false,
-      path: "/(.*)",
+      path: "/",
       sameSite: "none",
     },
   })
