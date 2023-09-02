@@ -63,7 +63,7 @@ const PostPage = () => {
             {userPost.picture && (
               <img
                 className="w-full aspect-square object-cover "
-                src={userPost.picture}
+                src={`${apiUrl}${userPost.picture}`}
                 alt=""
               />
             )}

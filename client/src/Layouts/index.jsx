@@ -6,10 +6,10 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <Seo
-        title="SocialMedia"
+        title="SocialNetwork"
         description="Description de la page"
         keywords="Mots-clés, SEO, Balises, Head"
-        iconUrl={"../src/Assets/mern.svg"}
+        iconUrl={"/mern.svg"}
       />
       <Header />
       <main>{children}</main>

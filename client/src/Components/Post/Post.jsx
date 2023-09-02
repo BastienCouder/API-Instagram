@@ -23,10 +23,10 @@ const Post = ({ post }) => {
         <div className="flex items-center mx-3 my-3">
           <img
             className="w-12 h-12 object-cover rounded-full"
-            src={
+            src={`${apiUrl}${
               usersData.find((user) => user._id === post?.posterId)?.picture ||
               ""
-            }
+            }`}
             alt=""
           />
           <h3 className="ms-4">
@@ -38,7 +38,7 @@ const Post = ({ post }) => {
           {post.picture && (
             <img
               className="w-full aspect-square object-cover"
-              src={`${apiUrl}/.${post.picture}`}
+              src={`${apiUrl}${post.picture}`}
               alt=""
             />
           )}

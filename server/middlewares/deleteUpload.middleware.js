@@ -2,10 +2,7 @@ const path = require("path");
 const fs = require("fs");
 
 const deleteFile = (fileName) => {
-  const filePathToDelete = path.resolve(
-    __dirname,
-    `../client/public/${fileName}`
-  );
+  const filePathToDelete = path.resolve(__dirname, `../uploads/${fileName}`);
 
   fs.unlink(filePathToDelete, (err) => {
     if (err) {

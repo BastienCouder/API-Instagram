@@ -69,7 +69,7 @@ const ProfileContent = ({
                       <Link to={`/post/${item._id}/${post._id}`}>
                         <img
                           className="max-w-full w-full aspect-square object-cover"
-                          src={`${apiUrl}/${post.picture}`}
+                          src={`${apiUrl}${post.picture}`}
                           alt={`Post ${post._id}`}
                         />
                       </Link>
