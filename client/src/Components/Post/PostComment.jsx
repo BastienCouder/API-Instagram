@@ -62,16 +62,17 @@ const CardComments = ({ post, type }) => {
               <div className="flex items-center">
                 {type === "thread" && (
                   <img
-                    src={`${apiUrl}/
+                    src={`${apiUrl}/${
                       usersData.find((user) => user._id === comment.commenterId)
-                        ?.picture`}
+                        ?.picture
+                    }`}
                     alt="commenter-pic"
                     className="h-7 w-7 object-cover rounded-full me-3 mt-3 text-sm"
                   />
                 )}
                 {type === "post" && (
                   <img
-                    src={`${apiUrl}/../.${
+                    src={`${apiUrl}/${
                       usersData.find((user) => user._id === comment.commenterId)
                         ?.picture
                     }`}

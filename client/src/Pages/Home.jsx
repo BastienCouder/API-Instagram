@@ -31,7 +31,7 @@ const Home = () => {
                   <Link to="/profil">
                     <img
                       className="object-cover p-1 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full border border-white border-2"
-                      src={`${apiUrl}/.${userData.picture}`}
+                      src={`${apiUrl}/${userData.picture}`}
                       alt=""
                     />
                   </Link>

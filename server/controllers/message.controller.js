@@ -35,7 +35,7 @@ module.exports.createMessage = async (req, res) => {
     const { sender, receiver } = req.body;
     let picturePath = null;
     if (req.file) {
-      picturePath = "/uploads/message/" + req.file.filename;
+      picturePath = "uploads/message/" + req.file.filename;
     }
 
     try {

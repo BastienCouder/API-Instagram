@@ -119,7 +119,7 @@ const MessageUser = () => {
               <div className="flex h-10 items-center mx-4 my-3">
                 <img
                   className="w-10 h-10 object-cover rounded-full"
-                  src={`${apiUrl}/../.${currentUser?.picture || ""}`}
+                  src={`${apiUrl}/${currentUser?.picture || ""}`}
                   alt=""
                 />
                 <h3 className="ms-4">{currentUser?.pseudo || ""}</h3>
@@ -147,7 +147,7 @@ const MessageUser = () => {
                         {message.picture && (
                           <>
                             <img
-                              src={`${apiUrl}/../../..${message.picture}`}
+                              src={`${apiUrl}/${message.picture}`}
                               alt={"Image"}
                               className={`text-white py-2 mb-2 ${
                                 isReceiver

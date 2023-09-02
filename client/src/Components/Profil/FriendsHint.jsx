@@ -69,21 +69,21 @@ const FriendsHint = ({ type }) => {
                     {type === "home" && (
                       <img
                         className="h-16 w-16 object-cover rounded-full"
-                        src={`${apiUrl}/.${userData.picture}`}
+                        src={`${apiUrl}/${userData.picture}`}
                         alt="user-pic"
                       />
                     )}
                     {type === "userprofil" && (
                       <img
                         className="h-16 w-16 object-cover rounded-full"
-                        src={`${apiUrl}/.${userData.picture}`}
+                        src={`${apiUrl}/${userData.picture}`}
                         alt="user-pic"
                       />
                     )}
                     {type === "message" && (
                       <img
                         className="h-16 w-16 object-cover rounded-full"
-                        src={`${apiUrl}/.${userData.picture}`}
+                        src={`${apiUrl}/${userData.picture}`}
                         alt="user-pic"
                       />
                     )}

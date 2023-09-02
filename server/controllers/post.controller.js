@@ -35,7 +35,7 @@ module.exports.createPost = async (req, res) => {
     }
 
     const { posterId, message } = req.body;
-    const picturePath = "/uploads/post/" + req.file.filename;
+    const picturePath = "uploads/post/" + req.file.filename;
 
     try {
       const post = await PostModel.create({
