@@ -25,7 +25,7 @@ module.exports.uploadProfil = async (req, res) => {
           .json({ error: "ID d'utilisateur manquant dans la demande." });
       }
 
-      const picturePath = "../uploads/profil/" + req.file.filename;
+      const picturePath = "/uploads/profil/" + req.file.filename;
       console.log(req.file.filename);
       console.log(req.file);
       try {
