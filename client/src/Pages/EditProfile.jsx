@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { updatePseudo, uploadPicture } from "../Store/actions/user.actions";
 import { updateBio } from "../Store/actions/user.actions";
 import { AiOutlineCloudUpload } from "react-icons/ai";
-import { location } from "../Utils/Utils";
+import { apiUrl, location } from "../Utils/Utils";
 import MainLayout from "../Layouts";
 import DeleteProfil from "../Components/Profil/DeleteProfil";
 
@@ -41,7 +41,7 @@ const EditProfile = () => {
 
   useEffect(() => {
     setBio(userData.bio || "");
-    setCurrentImage(`.${userData.picture}`);
+    setCurrentImage(`${apiUrl}/.${userData.picture}`);
     setPseudo(userData.pseudo || "");
     setShowPseudoField(!!userData.googleId);
   }, [userData]);

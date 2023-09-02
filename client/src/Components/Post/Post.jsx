@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { dateParser } from "../../Utils/Utils";
+import { apiUrl, dateParser } from "../../Utils/Utils";
 import { BiCommentDetail } from "react-icons/bi";
 import LikeButton from "./LikeButton";
 import PostCommentReply from "./PostCommentReply";
@@ -38,7 +38,7 @@ const Post = ({ post }) => {
           {post.picture && (
             <img
               className="w-full aspect-square object-cover"
-              src={`.${post.picture}`}
+              src={`${apiUrl}/.${post.picture}`}
               alt=""
             />
           )}

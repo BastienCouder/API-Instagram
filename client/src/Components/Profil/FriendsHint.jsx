@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { isEmpty } from "../../Utils/Utils";
+import { apiUrl, isEmpty } from "../../Utils/Utils";
 import FollowHandler from "./FollowHandler";
 import PropTypes from "prop-types";
 
@@ -69,21 +69,21 @@ const FriendsHint = ({ type }) => {
                     {type === "home" && (
                       <img
                         className="h-16 w-16 object-cover rounded-full"
-                        src={userData.picture}
+                        src={`${apiUrl}/.${userData.picture}`}
                         alt="user-pic"
                       />
                     )}
                     {type === "userprofil" && (
                       <img
                         className="h-16 w-16 object-cover rounded-full"
-                        src={`.${userData.picture}`}
+                        src={`${apiUrl}/.${userData.picture}`}
                         alt="user-pic"
                       />
                     )}
                     {type === "message" && (
                       <img
                         className="h-16 w-16 object-cover rounded-full"
-                        src={`.${userData.picture}`}
+                        src={`${apiUrl}/.${userData.picture}`}
                         alt="user-pic"
                       />
                     )}

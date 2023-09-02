@@ -5,10 +5,7 @@ const MIME_TYPES = {
   "image/jpeg": "jpg",
 };
 
-const uploadsDirectory = path.resolve(
-  __dirname,
-  "../../client/public/uploads/profil"
-);
+const uploadsDirectory = path.resolve(__dirname, "../uploads/profil");
 
 // Configuration de Multer
 const storage = multer.diskStorage({

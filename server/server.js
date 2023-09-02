@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
 const http = require("http");
+const path = require("path");
 const helmet = require("helmet");
 const passport = require("passport");
 const passportStrategy = require("./config/passport");
@@ -55,6 +56,8 @@ store.on("error", function (error) {
 app.get("/", function (req, res) {
   res.send("Hello " + JSON.stringify(req.session));
 });
+
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use(passport.initialize());
 app.use(passport.session());

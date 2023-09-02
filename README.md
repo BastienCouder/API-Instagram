@@ -1,2 +1,1 @@
-# SocialMedia
- 
+# SocialNetwork
