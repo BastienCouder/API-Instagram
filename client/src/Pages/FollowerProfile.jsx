@@ -112,7 +112,7 @@ const FollowingProfile = () => {
                     return null;
                   })
               ) : (
-                <li>No users found.</li>
+                <li>Aucun utilisateur trouvé.</li>
               )}
             </ul>
           </section>

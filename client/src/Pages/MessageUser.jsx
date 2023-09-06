@@ -147,7 +147,7 @@ const MessageUser = () => {
                         {message.picture && (
                           <>
                             <img
-                              src={`/${message.picture}`}
+                              src={`${message.picture}`}
                               alt={"Image"}
                               className={`text-white py-2 mb-2 ${
                                 isReceiver

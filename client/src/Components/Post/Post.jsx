@@ -23,7 +23,7 @@ const Post = ({ post }) => {
         <div className="flex items-center mx-3 my-3">
           <img
             className="w-12 h-12 object-cover rounded-full"
-            src={`/${
+            src={`${
               usersData.find((user) => user._id === post?.posterId)?.picture ||
               ""
             }`}
@@ -38,7 +38,7 @@ const Post = ({ post }) => {
           {post.picture && (
             <img
               className="w-full aspect-square object-cover"
-              src={`/${post.picture}`}
+              src={`${post.picture}`}
               alt=""
             />
           )}
