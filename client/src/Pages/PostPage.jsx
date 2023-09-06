@@ -48,7 +48,7 @@ const PostPage = () => {
           <div className="flex items-center mx-3 my-3">
             <img
               className="w-12 h-12 object-cover rounded-full"
-              src={`/${
+              src={`.${
                 usersData.find((user) => user._id === userPost.posterId)
                   ?.picture || ""
               }`}
@@ -63,7 +63,7 @@ const PostPage = () => {
             {userPost.picture && (
               <img
                 className="w-full aspect-square object-cover "
-                src={`/${userPost.picture}`}
+                src={`.${userPost.picture}`}
                 alt=""
               />
             )}

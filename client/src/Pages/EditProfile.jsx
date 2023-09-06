@@ -40,7 +40,7 @@ const EditProfile = () => {
 
   useEffect(() => {
     setBio(userData.bio || "");
-    setCurrentImage(`${userData.picture}`);
+    setCurrentImage(`.${userData.picture}`);
     setPseudo(userData.pseudo || "");
     setShowPseudoField(!!userData.googleId);
   }, [userData]);
