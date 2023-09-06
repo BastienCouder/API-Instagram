@@ -10,6 +10,7 @@ const userSchema = mongoose.Schema(
       minLength: 3,
       maxLength: 16,
       unique: true,
+      lowercase: true,
       trim: true,
     },
     pseudoChanged: {

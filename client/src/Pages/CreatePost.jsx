@@ -143,7 +143,7 @@ const CreatePost = () => {
                     </div>
                     <div className=" flex flex-col ms-2">
                       {userData?.pseudo && (
-                        <h1 className="font-bold capitalize text-lg lg:w-24">
+                        <h1 className="font-bold text-lg lg:w-24">
                           {userData.pseudo}
                         </h1>
                       )}
