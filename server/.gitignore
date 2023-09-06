@@ -1,6 +1,2 @@
 node_modules
 .env
-.vercel
-Docherfile
-docker-compose.yml
-.dockerignore
