@@ -6,7 +6,6 @@ import { BsFillSendFill } from "react-icons/bs";
 import PostReply from "./PostReply";
 import UidContext from "../../Services/AppContext";
 import PropTypes from "prop-types";
-import { apiUrl } from "../../Utils/Utils";
 
 const CardComments = ({ post, type }) => {
   const uid = useContext(UidContext);
@@ -62,7 +61,7 @@ const CardComments = ({ post, type }) => {
               <div className="flex items-center">
                 {type === "thread" && (
                   <img
-                    src={`${apiUrl}/${
+                    src={`/${
                       usersData.find((user) => user._id === comment.commenterId)
                         ?.picture
                     }`}
@@ -72,7 +71,7 @@ const CardComments = ({ post, type }) => {
                 )}
                 {type === "post" && (
                   <img
-                    src={`${apiUrl}/${
+                    src={`/${
                       usersData.find((user) => user._id === comment.commenterId)
                         ?.picture
                     }`}

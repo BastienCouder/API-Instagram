@@ -3,7 +3,6 @@ import {
   resizeImage,
   adjustSquareImages,
   timestampParser,
-  apiUrl,
 } from "../Utils/Utils";
 import { useDispatch, useSelector } from "react-redux";
 import { createPost, getPosts } from "../Store/actions/post.actions";
@@ -136,7 +135,7 @@ const CreatePost = () => {
                       {userData?.picture && (
                         <img
                           className="object-cover p-1 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full border border-white border-2"
-                          src={`${apiUrl}/${userData.picture}`}
+                          src={`/${userData.picture}`}
                           alt=""
                         />
                       )}
@@ -223,7 +222,7 @@ const CreatePost = () => {
                   {message || selectedImage ? (
                     <input
                       type="submit"
-                      value="Reset"
+                      value="Reinitialisé"
                       onClick={handleCancelPost}
                       className="w-full mt-4 cursor-pointer py-2 px-4 bg-blackHover rounded-md"
                     />

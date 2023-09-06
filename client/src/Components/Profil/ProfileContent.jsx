@@ -1,7 +1,6 @@
 import UsersInfosPFF from "./UsersInfosPFF";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { apiUrl } from "../../Utils/Utils";
 
 const ProfileContent = ({
   uid,
@@ -19,7 +18,7 @@ const ProfileContent = ({
             <div className="w-2/5 sm:1/2 flex justify-center items-center ">
               <img
                 className="p-2 h-28 object-cover w-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36  rounded-full border border-white border-2"
-                src={`${apiUrl}/${item.picture}`}
+                src={`/${item.picture}`}
                 alt=""
               />
             </div>
@@ -69,7 +68,7 @@ const ProfileContent = ({
                       <Link to={`/post/${item._id}/${post._id}`}>
                         <img
                           className="max-w-full w-full aspect-square object-cover"
-                          src={`${apiUrl}/${post.picture}`}
+                          src={`/${post.picture}`}
                           alt={`Post ${post._id}`}
                         />
                       </Link>

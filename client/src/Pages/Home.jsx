@@ -5,7 +5,6 @@ import UidContext from "../Services/AppContext";
 import { Link } from "react-router-dom";
 import FriendsHint from "../Components/Profil/FriendsHint";
 import MainLayout from "../Layouts";
-import { apiUrl } from "../Utils/Utils";
 
 const Home = () => {
   const usersData = useSelector((state) => state.Allusers);
@@ -31,7 +30,7 @@ const Home = () => {
                   <Link to="/profil">
                     <img
                       className="object-cover p-1 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full border border-white border-2"
-                      src={`${apiUrl}/${userData.picture}`}
+                      src={`/${userData.picture}`}
                       alt=""
                     />
                   </Link>
