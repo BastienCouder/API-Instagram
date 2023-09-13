@@ -5,7 +5,6 @@ import { AiOutlineSearch } from "react-icons/ai";
 import FollowHandler from "../Components/Profil/FollowHandler";
 import UidContext from "../Services/AppContext";
 import MainLayout from "../Layouts";
-import { clientUrl } from "../Utils/Utils";
 
 const Search = () => {
   const usersData = useSelector((state) => state.Allusers);

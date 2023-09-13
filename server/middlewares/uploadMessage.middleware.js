@@ -9,7 +9,10 @@ const MIME_TYPES = {
   "image/webp": "webp",
 };
 
-const uploadsDirectory = path.resolve(__dirname, "../uploads/message");
+const uploadsDirectory = path.resolve(
+  __dirname,
+  "../../client/public/uploads/message"
+);
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
