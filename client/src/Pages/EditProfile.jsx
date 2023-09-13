@@ -8,6 +8,7 @@ import { updateBio } from "../Store/actions/user.actions";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import MainLayout from "../Layouts";
 import DeleteProfil from "../Components/Profil/DeleteProfil";
+import { clientUrl } from "../Utils/Utils";
 
 const EditProfile = () => {
   const uid = useContext(UidContext);
@@ -40,7 +41,7 @@ const EditProfile = () => {
 
   useEffect(() => {
     setBio(userData.bio || "");
-    setCurrentImage(`${userData.picture}`);
+    setCurrentImage(`${clientUrl}/profil/${userData.picture}`);
     setPseudo(userData.pseudo || "");
     setShowPseudoField(!!userData.googleId);
   }, [userData]);

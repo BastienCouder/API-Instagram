@@ -2,7 +2,7 @@ import { useState } from "react";
 import { IoMdReturnLeft } from "react-icons/io";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { dateParser } from "../Utils/Utils";
+import { clientUrl, dateParser } from "../Utils/Utils";
 import { BiCommentDetail } from "react-icons/bi";
 import Delete from "../Components/Post/Delete";
 import PostCommentReply from "../Components/Post/PostCommentReply";
@@ -48,7 +48,7 @@ const PostPage = () => {
           <div className="flex items-center mx-3 my-3">
             <img
               className="w-12 h-12 object-cover rounded-full"
-              src={`../.${
+              src={`${clientUrl}/profil/${
                 usersData.find((user) => user._id === userPost.posterId)
                   ?.picture || ""
               }`}

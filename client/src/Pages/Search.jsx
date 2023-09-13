@@ -5,6 +5,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import FollowHandler from "../Components/Profil/FollowHandler";
 import UidContext from "../Services/AppContext";
 import MainLayout from "../Layouts";
+import { clientUrl } from "../Utils/Utils";
 
 const Search = () => {
   const usersData = useSelector((state) => state.Allusers);
@@ -65,7 +66,7 @@ const Search = () => {
                         <div className="flex items-center">
                           <Link to={profileLink}>
                             <img
-                              src={`.${user?.picture}`}
+                              src={`${user?.picture}`}
                               alt={`Profil de ${user?.pseudo}`}
                               className="object-cover p-1 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full border border-white border-2"
                             />
