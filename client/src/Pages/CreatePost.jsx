@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { createPost, getPosts } from "../Store/actions/post.actions";
 import UidContext from "../Services/AppContext";
 import MainLayout from "../Layouts";
+import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {
   const uid = useContext(UidContext);
@@ -20,6 +21,7 @@ const CreatePost = () => {
   const error = useSelector((state) => state.error);
   const imageRefs = useRef();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [isPopupPostOpen, setIsPopupPostOpen] = useState(false);
 
@@ -84,14 +86,15 @@ const CreatePost = () => {
       data.append("message", message);
       if (picture) data.append("image", picture);
 
-      await dispatch(createPost(data));
+      dispatch(createPost(data));
       if (!error.postError) {
-        dispatch(getPosts());
+        await dispatch(getPosts());
         handleCancelPost();
 
         setIsPopupPostOpen(true);
         setTimeout(() => {
           setIsPopupPostOpen(false);
+          navigate("/");
         }, 3000);
       }
     }

@@ -62,7 +62,7 @@ const EditProfile = () => {
       console.log(pseudo);
       data.append("userId", userData._id);
       data.append("avatar", file);
-      await dispatch(uploadPicture(data, userData._id));
+      dispatch(uploadPicture(data, userData._id));
 
       if (!error.uploadError) {
         setIsPopupImageSaveOpen(true);

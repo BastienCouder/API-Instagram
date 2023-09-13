@@ -7,7 +7,10 @@ const MIME_TYPES = {
   "image/png": "png",
 };
 
-const uploadsDirectory = path.resolve(__dirname, "../uploads/post");
+const uploadsDirectory = path.resolve(
+  __dirname,
+  "../../client/public/uploads/post"
+);
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {

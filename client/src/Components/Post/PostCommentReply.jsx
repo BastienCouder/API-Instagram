@@ -33,7 +33,7 @@ const PostCommentsReply = ({ post, type }) => {
   };
 
   return (
-    <div className="flex w-full px-4">
+    <div className="flex flex-col w-full px-4">
       {uid && (
         <>
           {!showInputComment && (
