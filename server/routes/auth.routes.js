@@ -33,6 +33,7 @@ router.get(
           secure: true,
           sameSite: "none",
         });
+        console.log(token);
 
         res.redirect(`${process.env.CLIENT_URL}`);
       } else {
