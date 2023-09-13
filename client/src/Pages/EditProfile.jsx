@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { IoMdReturnLeft } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import UidContext from "../Services/AppContext";
 import { useDispatch, useSelector } from "react-redux";
 import { updatePseudo, uploadPicture } from "../Store/actions/user.actions";
@@ -25,6 +25,7 @@ const EditProfile = () => {
   const userData = useSelector((state) => state.user);
   const error = useSelector((state) => state.error);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (file) {
@@ -69,7 +70,7 @@ const EditProfile = () => {
         setTimeout(() => {
           setIsPopupImageSaveOpen(false);
         }, 3000);
-        location("/profil");
+        navigate("/");
       }
     }
   };
