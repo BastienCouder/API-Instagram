@@ -3,7 +3,7 @@ const ObjectID = require("mongoose").Types.ObjectId;
 
 module.exports.getAllUser = async (req, res) => {
   try {
-    const users = await UserModel.find().select("-password -email -googleId");
+    const users = await UserModel.find().select("-password -googleId");
     res.status(200).json(users);
   } catch (error) {
     console.error("Erreur lors de la récupération des utilisateurs : ", error);
@@ -20,7 +20,7 @@ module.exports.userInfo = async (req, res) => {
   }
 
   try {
-    const user = await UserModel.findById(id).select("-password -email").exec();
+    const user = await UserModel.findById(id).select("-password").exec();
     if (!user) {
       return res.status(404).send("Utilisateur non trouvé pour l'ID : " + id);
     }
