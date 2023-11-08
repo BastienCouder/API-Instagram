@@ -37,9 +37,9 @@ Executez les commande: ``cd server`` ``npm i`` ``npm run server``
 * [tailwind.css](tailwindcss.com) - Framework CSS (front-end)
 * [ReactJs](https://fr.legacy.reactjs.org/)  - Librairie Javascript (front-end)
 * [vite](https://vitejs.dev/)  - serveur de développement (front-end)
-- [Redux](https://redux.js.org/) - State management (front-end)
-- [Nodejs](https://nodejs.org/en/docs) - Langage Javascript (back-end)
-- [MongoDB](https://www.mongodb.com/fr-fr) - Base de données (NoSQL)
+* [Redux](https://redux.js.org/) - State management (front-end)
+* [Nodejs](https://nodejs.org/en/docs) - Langage Javascript (back-end)
+* [MongoDB](https://www.mongodb.com/fr-fr) - Base de données (NoSQL)
 
 ## Auteurs
 Listez le(s) auteur(s) du projet ici !
