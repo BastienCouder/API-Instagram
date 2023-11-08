@@ -44,6 +44,3 @@ Executez les commande: ``cd server`` ``npm i`` ``npm run server``
 ## Auteurs
 Listez le(s) auteur(s) du projet ici !
 * **Bastien Couder** _alias_ [@BastienCouder](https://github.com/BastienCOuder)
-## License
-
-Ce projet est sous licence ``exemple: WTFTPL`` - voir le fichier [LICENSE.md](LICENSE.md) pour plus d'information
