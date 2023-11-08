@@ -25,10 +25,10 @@ Ce qu'il est requis pour commencer avec le projet...
 
 ### Installation et Démarrage
 
-client
+Client :
 Executez les commande: ``cd client`` ``npm i`` ``npm run dev``
 
-Serveur
+Serveur :
 Executez les commande: ``cd server`` ``npm i`` ``npm run server``
 
 
