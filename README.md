@@ -6,15 +6,15 @@ Ce projet est un clone d'Instagram qui permet aux utilisateurs de partager des p
 
 ## Fonctionnalités
 
-Création d'un compte utilisateur
-Modification de son profil
-Fil d'actualité
-Recherche utilisateur
-Publication de photos
-Likes sur les photos
-Commentaires sur les photos
-Suivi d'autres utilisateurs ( follow / followers )
-Suggestion d'amis
+-Création d'un compte utilisateur
+-Modification de son profil
+-Fil d'actualité
+-Recherche utilisateur
+-Publication de photos
+-Likes sur les photos
+-Commentaires sur les photos
+-Suivi d'autres utilisateurs ( follow / followers )
+-Suggestion d'amis
 
 ### Pré-requis
 
