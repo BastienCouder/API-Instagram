@@ -3,7 +3,6 @@ Ce projet est un clone d'Instagram qui permet aux utilisateurs de partager des p
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/ctrl-c-ctrl-v.svg)](https://forthebadge.com)
-[![forthebadge](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMzguMjM3NTE4MzEwNTQ2ODgiIGhlaWdodD0iMzUiIHZpZXdCb3g9IjAgMCAxMzguMjM3NTE4MzEwNTQ2ODggMzUiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIzNSIgZmlsbD0iI2FlNGVhMyIvPjxyZWN0IHg9IjIwIiB3aWR0aD0iMTE4LjIzNzUxODMxMDU0Njg4IiBoZWlnaHQ9IjM1IiBmaWxsPSIjYWU0ZWEzIi8+PHRleHQgeD0iMTAiIHk9IjE3LjUiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtZmFtaWx5PSInUm9ib3RvJywgc2Fucy1zZXJpZiIgZmlsbD0iI0ZGRkZGRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgYWxpZ25tZW50LWJhc2VsaW5lPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIyIj4gPC90ZXh0Pjx0ZXh0IHg9Ijc5LjExODc1OTE1NTI3MzQ0IiB5PSIxNy41IiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmaWxsPSIjRkZGRkZGIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iOTAwIiBhbGlnbm1lbnQtYmFzZWxpbmU9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjIiPklOU1RBR1JBTTwvdGV4dD48L3N2Zz4=)](https://forthebadge.com)
 
 ## Fonctionnalités
 
@@ -21,9 +20,8 @@ Suggestion d'amis
 
 Ce qu'il est requis pour commencer avec le projet...
 
-- Nodejs
-- Redux
-- NoSQL
+- Nodejs d'installé
+- Base de données MongoDB
 
 ### Installation et Démarrage
 
