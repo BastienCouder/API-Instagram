@@ -6,7 +6,6 @@ const uploadPost = require("../middlewares/uploadPost.middleware");
 const multer = require("multer");
 const deleteFile = require("../middlewares/deleteUpload.middleware");
 
-//Récupérer tous les Posts
 module.exports.readPost = async (req, res) => {
   try {
     const posts = await PostModel.find().sort({ createdAt: -1 });
@@ -17,6 +16,7 @@ module.exports.readPost = async (req, res) => {
   }
 };
 
+//createPost
 module.exports.createPost = async (req, res) => {
   uploadPost(req, res, async (err) => {
     if (err) {
@@ -44,6 +44,8 @@ module.exports.createPost = async (req, res) => {
         message,
         likers: [],
       });
+      console.log("create");
+
       return res.status(200).send(post);
     } catch (error) {
       console.log("Erreur lors de la création du post :", error);
@@ -54,7 +56,6 @@ module.exports.createPost = async (req, res) => {
   });
 };
 
-//Éditer un Post
 module.exports.editPost = async (req, res) => {
   const { id } = req.params;
   const { message } = req.body;
@@ -81,8 +82,6 @@ module.exports.editPost = async (req, res) => {
   }
 };
 
-//Supprimer un Post
-
 module.exports.deletePost = async (req, res) => {
   const { id } = req.params;
   if (!ObjectID.isValid(id)) {
@@ -106,7 +105,6 @@ module.exports.deletePost = async (req, res) => {
   }
 };
 
-//Like un Post
 module.exports.likePost = async (req, res) => {
   const { id } = req.params;
   const { userId } = req.body;
@@ -131,7 +129,6 @@ module.exports.likePost = async (req, res) => {
   }
 };
 
-//Dislike un Post
 module.exports.dislikePost = async (req, res) => {
   const { id } = req.params;
   const { userId } = req.body;

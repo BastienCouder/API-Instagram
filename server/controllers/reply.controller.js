@@ -39,9 +39,9 @@ module.exports.replyEditCommentPost = async (req, res) => {
   }
   try {
     const updatedReplyCommentPost = await PostModel.findOneAndUpdate(
-      { "comments._id": commentId, "comments.replies._id": replierId }, // $inutile car recherche spécifique dans replies
-      { $set: { "comments.$.replies.$[reply].text": text } }, // $utile car nous rentrons dans l'object replies + =>
-      { new: true, arrayFilters: [{ "reply._id": replierId }] } // Filtrez le tableau replies pour mettre à jour la réponse spécifique
+      { "comments._id": commentId, "comments.replies._id": replierId },
+      { $set: { "comments.$.replies.$[reply].text": text } },
+      { new: true, arrayFilters: [{ "reply._id": replierId }] }
     );
 
     if (!updatedReplyCommentPost) {

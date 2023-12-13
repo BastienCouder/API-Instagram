@@ -7,13 +7,8 @@ import FriendsHint from "../Components/Profil/FriendsHint";
 import MainLayout from "../Layouts";
 
 const Home = () => {
-  const usersData = useSelector((state) => state.Allusers);
   const userData = useSelector((state) => state.user);
   const uid = useContext(UidContext);
-
-  if (!usersData) {
-    return <div>Chargement...</div>;
-  }
 
   return (
     <MainLayout>

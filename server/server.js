@@ -11,6 +11,8 @@ const passport = require("passport");
 const passportStrategy = require("./config/passport");
 const crypto = require("crypto");
 const MongoDBStore = require("connect-mongodb-session")(session);
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./config/swagger");
 
 const { checkUser, requireAuth } = require("./middlewares/auth.middleware");
 
@@ -27,6 +29,9 @@ let store = new MongoDBStore({
   uri: process.env.MONGODB_URI,
   collection: "sessions",
 });
+
+// Route pour la documentation Swagger
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Middleware
 app.set("trust proxy", 1);

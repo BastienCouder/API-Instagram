@@ -7,8 +7,83 @@ const { createToken, maxAge } = require("../utils/jwt.utils");
 const userModel = require("../models/user.model");
 
 // auth
+/**
+ * @swagger
+ * /auth/register:
+ *   post:
+ *     summary: Inscrire un nouvel utilisateur
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - pseudo
+ *               - email
+ *               - password
+ *             properties:
+ *               pseudo:
+ *                 type: string
+ *                 description: Pseudo de l'utilisateur
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 description: Email de l'utilisateur
+ *               password:
+ *                 type: string
+ *                 description: Mot de passe de l'utilisateur
+ *     responses:
+ *       201:
+ *         description: Inscription réussie
+ *       422:
+ *         description: Élément manquant dans la demande
+ *       500:
+ *         description: Erreur serveur lors de l'inscription
+ */
 router.post("/register", authController.signUp);
+/**
+ * @swagger
+ * /auth/login:
+ *   post:
+ *     summary: Connecter un utilisateur existant
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - email
+ *               - password
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 description: Email de l'utilisateur
+ *               password:
+ *                 type: string
+ *                 description: Mot de passe de l'utilisateur
+ *     responses:
+ *       200:
+ *         description: Connexion réussie
+ *       422:
+ *         description: Élément manquant dans la demande
+ *       500:
+ *         description: Erreur serveur lors de la connexion
+ */
 router.post("/login", authController.signIn);
+/**
+ * @swagger
+ * /auth/logout:
+ *   get:
+ *     summary: Déconnecter un utilisateur
+ *     responses:
+ *       200:
+ *         description: Déconnexion réussie
+ *       500:
+ *         description: Erreur serveur lors de la déconnexion
+ */
 router.get("/logout", authController.logout);
 router.post("/forgot-password", passwordController.requestReset);
 router.post("/reset-password/:token", passwordController.resetPassword);
