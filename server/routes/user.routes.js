@@ -10,7 +10,7 @@ const upload = multer();
 //users & user
 /**
  * @swagger
- * /users/:
+ * /user/:
  *   get:
  *     summary: Récupérer tous les utilisateurs
  *     responses:
@@ -22,7 +22,7 @@ const upload = multer();
 router.get("/", userController.getAllUser);
 /**
  * @swagger
- * /users/{id}:
+ * /user/{id}:
  *   get:
  *     summary: Obtenir les informations d'un utilisateur
  *     parameters:
@@ -46,7 +46,7 @@ router.get("/", userController.getAllUser);
 router.get("/:id", userController.userInfo);
 /**
  * @swagger
- * /users/{id}:
+ * /user/{id}:
  *   put:
  *     summary: Mettre à jour les informations d'un utilisateur
  *     parameters:
@@ -83,7 +83,7 @@ router.get("/:id", userController.userInfo);
 router.put("/:id", userController.userUpdate);
 /**
  * @swagger
- * /users/{id}:
+ * /user/{id}:
  *   delete:
  *     summary: Supprimer un utilisateur
  *     parameters:
@@ -107,7 +107,7 @@ router.delete("/:id", userController.deleteUser);
 
 /**
  * @swagger
- * /users/follow/{id}:
+ * /user/follow/{id}:
  *   patch:
  *     summary: Suivre un autre utilisateur
  *     parameters:
@@ -140,7 +140,7 @@ router.delete("/:id", userController.deleteUser);
 router.patch("/follow/:id", userController.follow);
 /**
  * @swagger
- * /users/unfollow/{id}:
+ * /user/unfollow/{id}:
  *   patch:
  *     summary: Ne plus suivre un utilisateur
  *     parameters:
