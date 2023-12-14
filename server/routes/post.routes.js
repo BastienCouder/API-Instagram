@@ -7,7 +7,7 @@ const router = express.Router();
 //posts
 /**
  * @swagger
- * /posts:
+ * /post:
  *   get:
  *     summary: Récupère tous les posts
  *     responses:
@@ -81,7 +81,7 @@ router.get("/", postController.readPost);
 router.post("/", postController.createPost);
 /**
  * @swagger
- * /posts/{id}:
+ * /post/{id}:
  *   put:
  *     summary: Édite un post existant
  *     parameters:
@@ -114,7 +114,7 @@ router.post("/", postController.createPost);
 router.put("/:id", postController.editPost);
 /**
  * @swagger
- * /posts/{id}:
+ * /post/{id}:
  *   delete:
  *     summary: Supprime un post
  *     parameters:
@@ -179,7 +179,7 @@ router.delete("/:id", postController.deletePost);
 router.patch("/like-post/:id", postController.likePost);
 /**
  * @swagger
- * /posts/dislike/{id}:
+ * /post/dislike/{id}:
  *   patch:
  *     summary: Dislike un post
  *     parameters:
@@ -212,7 +212,7 @@ router.patch("/dislike-post/:id", postController.dislikePost);
 //comments
 /**
  * @swagger
- * /comment-post/{id}:
+ * /post/comment-post/{id}:
  *   patch:
  *     summary: Ajoute un commentaire à un post
  *     parameters:
@@ -253,7 +253,7 @@ router.patch("/dislike-post/:id", postController.dislikePost);
 router.patch("/comment-post/:id", commentController.commentPost);
 /**
  * @swagger
- * /edit-comment-post/{id}:
+ * /post/edit-comment-post/{id}:
  *   patch:
  *     summary: Édite un commentaire sur un post
  *     parameters:
@@ -292,7 +292,7 @@ router.patch("/comment-post/:id", commentController.commentPost);
 router.patch("/edit-comment-post/:id", commentController.editCommentPost);
 /**
  * @swagger
- * /delete-comment-post/{id}:
+ * /post/delete-comment-post/{id}:
  *   patch:
  *     summary: Supprime un commentaire d'un post
  *     parameters:
@@ -327,7 +327,7 @@ router.patch("/edit-comment-post/:id", commentController.editCommentPost);
 router.patch("/delete-comment-post/:id", commentController.deleteCommentPost);
 /**
  * @swagger
- * /like-comment/{commentId}:
+ * /post/like-comment/{commentId}:
  *   patch:
  *     summary: Like un commentaire
  *     parameters:
@@ -362,7 +362,7 @@ router.patch("/delete-comment-post/:id", commentController.deleteCommentPost);
 router.patch("/like-comment/:commentId", commentController.likeComment);
 /**
  * @swagger
- * /dislike-comment/{commentId}:
+ * /post/dislike-comment/{commentId}:
  *   patch:
  *     summary: Dislike un commentaire
  *     parameters:
@@ -399,7 +399,7 @@ router.patch("/dislike-comment/:commentId", commentController.dislikeComment);
 //Repliers
 /**
  * @swagger
- * /{commentId}/reply:
+ * /post/{commentId}/reply:
  *   patch:
  *     summary: Répondre à un commentaire
  *     parameters:
@@ -443,7 +443,7 @@ router.patch("/:commentId/reply", replyController.replyCommentPost);
 
 /**
  * @swagger
- * /{commentId}/reply-edit:
+ * /post/{commentId}/reply-edit:
  *   patch:
  *     summary: Éditer une réponse à un commentaire
  *     parameters:
@@ -483,7 +483,7 @@ router.patch("/:commentId/reply", replyController.replyCommentPost);
 router.patch("/:commentId/reply-edit", replyController.replyEditCommentPost);
 /**
  * @swagger
- * /{commentId}/reply-delete:
+ * /post/{commentId}/reply-delete:
  *   patch:
  *     summary: Supprimer une réponse à un commentaire
  *     parameters:

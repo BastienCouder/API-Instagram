@@ -5,7 +5,7 @@ const router = express.Router();
 //Messages
 /**
  * @swagger
- * /messages/:
+ * /message/:
  *   get:
  *     summary: Récupérer tous les messages
  *     responses:
@@ -17,7 +17,7 @@ const router = express.Router();
 router.get("/", messageController.readMessage);
 /**
  * @swagger
- * /messages/:
+ * /message/:
  *   post:
  *     summary: Créer un nouveau message
  *     requestBody:
@@ -54,7 +54,7 @@ router.get("/", messageController.readMessage);
 router.post("/", messageController.createMessage);
 /**
  * @swagger
- * /messages/{id}:
+ * /message/{id}:
  *   put:
  *     summary: Éditer un message
  *     parameters:
@@ -88,7 +88,7 @@ router.post("/", messageController.createMessage);
 router.put("/:id", messageController.editMessage);
 /**
  * @swagger
- * /messages/{id}:
+ * /message/{id}:
  *   delete:
  *     summary: Supprimer un message
  *     parameters:
