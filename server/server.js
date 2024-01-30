@@ -17,7 +17,6 @@ const swaggerDocument = require("./config/swagger");
 const { checkUser, requireAuth } = require("./middlewares/auth.middleware");
 
 const secretKey = crypto.randomBytes(32).toString("hex");
-console.log("Clé secrète générée :", secretKey);
 
 // Connexion à la DB
 connectDB();
@@ -59,7 +58,7 @@ store.on("error", function (error) {
 });
 
 app.get("/", function (req, res) {
-  res.send("Hello " + JSON.stringify(req.session));
+  res.send("/api-docs pour acceder à la documentation");
 });
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
